@@ -3,8 +3,6 @@
 
 # # 決定木
 
-# In[1]:
-
 
 import pandas as pd
 import numpy as np
@@ -16,9 +14,6 @@ from sklearn import tree
 import pydotplus
 from IPython.display import Image
 import matplotlib.pyplot as plt
-
-
-# In[2]:
 
 
 #=============================================
@@ -56,10 +51,6 @@ output_dpath =parent_dpath + '\\' + OUTPUT_folder
 #print('INFO:output_path:' + output_dpath)   
 
 
-
-# In[3]:
-
-
 #=============================================
 # サンプルデータ読み込む
 #=============================================
@@ -67,20 +58,13 @@ df = pd.read_csv(input_dpath,encoding='shift-JIS')
 df = pd.DataFrame(df)
 
 #df.head(3)
-df
-
-
-# In[4]:
+#df
 
 
 #=============================================
 #欠損を調べる　　不要
 #=============================================
 #df.isna().sum()
-
-
-# In[5]:
-
 
 #=============================================
 #説明変数 だけにする
@@ -97,22 +81,12 @@ display(X_df.head())
 print(y_df.head())
 
 
-# In[ ]:
-
-
-
-
-
-# In[6]:
-
 
 X_train, X_test, y_train, y_test = train_test_split(X_df, y_df, random_state=0)
 
 print(len(X_train))
 print(len(X_test))
 
-
-# In[7]:
 
 
 # 決定木モデルを構築するクラスを初期化
@@ -125,14 +99,6 @@ model = clf.fit(X_train, y_train)
 print('正解率(train):{:.3f}'.format(model.score(X_train, y_train)))
 print('正解率(test):{:.3f}'.format(model.score(X_test, y_test)))
 
-
-# In[ ]:
-
-
-
-
-
-# In[8]:
 
 
 def add_class_legend(legend_text, x=0.02, y=0.98):
@@ -154,14 +120,9 @@ def add_class_legend(legend_text, x=0.02, y=0.98):
     )
 
 
-# In[9]:
-
 
 # 決定木を描画
 model.fit(X_df, y_df)
-
-
-# In[10]:
 
 
 # クラスのインデックス対応表を作成
@@ -186,8 +147,6 @@ plt.savefig("decision_tree_N.png", dpi=300)
 plt.show()
 
 
-# In[12]:
-
 
 # 比率あり
 plt.figure(figsize=(20,10))
@@ -204,9 +163,7 @@ add_class_legend(legend_text)  # ←再利用できる
 
 plt.savefig("decision_tree.png", dpi=300)
 plt.show()
-
-
-# In[ ]:
+:
 
 
 
