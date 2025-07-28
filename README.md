@@ -2,7 +2,7 @@
 
 Python、Rともに決定木の作成を実装しています。
 
-[Pyファイルはこちら](https://github.com/iwakazusuwa/py_tree)
+👉 [Pyファイルはこちら](https://github.com/iwakazusuwa/py_tree)
 
 詳しい使い方や解説は以下の記事をご覧ください。
 
